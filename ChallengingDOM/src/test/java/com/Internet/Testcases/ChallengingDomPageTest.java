@@ -166,10 +166,10 @@ public class ChallengingDomPageTest extends TestBase {
 	@Test(priority = 15)
 	public void validateCanvasTest2() {
 		String answer1 = cdp.validateCanvas();
-		System.out.println("Answer before page refresh is :" + answer1);
+		System.out.println("Answer before button click is :" + answer1);
 		cdp.getBluebutton().click();
 		String answer2 = cdp.validateCanvas();
-		System.out.println("Answer after page refresh is :" + answer2);
+		System.out.println("Answer after button click is :" + answer2);
 		Assert.assertNotEquals(answer1, answer2);
 	}
 
