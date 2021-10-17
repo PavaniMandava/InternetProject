@@ -109,8 +109,7 @@ public class ChallengingDOMPage extends TestBase {
 	//Validate Canvas answer value
 	public String validateCanvas() {
 		wait.until(ExpectedConditions.visibilityOf(header));
-		// grab the canvas generation script block, which contains the Answer
-		// buried in javascript
+		// grab the canvas generation script block, which contains the Answer buried in java script
 		String value = answer.getAttribute("innerHTML");
 		String pattern = "Answer:\\s(\\d+)";
 		Pattern r = Pattern.compile(pattern);
