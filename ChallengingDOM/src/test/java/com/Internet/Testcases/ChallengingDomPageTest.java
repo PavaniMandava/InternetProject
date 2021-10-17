@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.Internet.Base.TestBase;
@@ -18,7 +18,7 @@ public class ChallengingDomPageTest extends TestBase {
 	ChallengingDOMPage cdp;
 
 	// Setup
-	@BeforeMethod
+	@BeforeTest
 	public void setup() {
 		initialization();
 		cdp = PageFactory.initElements(driver, ChallengingDOMPage.class);
@@ -174,7 +174,7 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// TearDown
-	@AfterMethod
+	@AfterTest
 	public void tearDown() {
 		driver.close();
 	}
