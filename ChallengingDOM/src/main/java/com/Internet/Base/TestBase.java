@@ -25,19 +25,19 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-	//Browser intialization
+	//Browser initialisation
 	public static void initialization(){
 		
 		String browserName = prop.getProperty("browser");		
 		
 		if(browserName.equalsIgnoreCase("chrome")){
 			System.out.println("Executing in Chrome browser_________________________");
-			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromepath"));	
+			//System.setProperty("webdriver.chrome.driver", prop.getProperty("chromepath"));	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equalsIgnoreCase("firefox")){
 			System.out.println("Executing in Firefox browser___________________________");
-			System.setProperty("webdriver.gecko.driver",prop.getProperty("geckopath"));	
+			//System.setProperty("webdriver.gecko.driver",prop.getProperty("geckopath"));	
 			driver = new FirefoxDriver(); 
 		}
 		driver.manage().window().maximize();
