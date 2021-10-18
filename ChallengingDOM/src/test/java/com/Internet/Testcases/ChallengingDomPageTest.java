@@ -95,7 +95,7 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// Test that checks the headers of the static table
-	@Test(priority = 9)
+	@Test(priority = 6)
 	public void validateTableHeadersTest() {
 		List<WebElement> headers = cdp.validateTableHeaders();
 		Assert.assertEquals(headers.get(0).getText(), "Lorem");
@@ -108,7 +108,7 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// Test that checks the column contents of the static table
-	@Test(priority = 10)
+	@Test(priority = 7)
 	public void validateTableColumn() {
 		List<WebElement> column = cdp.validateTableColumn();
 		Assert.assertEquals(column.get(0).getText(), "Iuvaret0");
@@ -124,7 +124,7 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// Test that checks the row contents of the static table
-	@Test(priority = 11)
+	@Test(priority = 8)
 	public void validateTableRow() {
 		List<WebElement> column = cdp.validateTableRow();
 		Assert.assertEquals(column.get(0).getText(), "Iuvaret0");
@@ -136,14 +136,14 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// Test that checks the change of url after clicking edit button
-	@Test(priority = 12)
+	@Test(priority = 9)
 	public void validateEditTest() {
 		String url = cdp.validateEdit();
 		Assert.assertEquals(url, "https://the-internet.herokuapp.com/challenging_dom#edit");
 	}
 
 	// Test that checks the change of url after clicking delete button
-	@Test(priority = 13)
+	@Test(priority = 10)
 	public void validateDeleteTest() {
 		String url = cdp.validateDelete();
 		Assert.assertEquals(url, "https://the-internet.herokuapp.com/challenging_dom#delete");
@@ -152,7 +152,7 @@ public class ChallengingDomPageTest extends TestBase {
 	// Tests that checks the "answer" in the canvas
 
 	// Test that checks "answer' is changing with page refresh
-	@Test(priority = 14)
+	@Test(priority = 11)
 	public void validateCanvasTest1() {
 		String answer1 = cdp.validateCanvas();
 		System.out.println("Answer before page refresh is :" + answer1);
@@ -163,7 +163,7 @@ public class ChallengingDomPageTest extends TestBase {
 	}
 
 	// Test that checks "answer' is changing with button click
-	@Test(priority = 15)
+	@Test(priority = 12)
 	public void validateCanvasTest2() {
 		String answer1 = cdp.validateCanvas();
 		System.out.println("Answer before button click is :" + answer1);
